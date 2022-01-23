@@ -17,4 +17,4 @@ Laden Sie die Daten `nonlinear_programming.ipynb` und `nonlinear_programming.py`
 
 Nun können sie die einzelnen Zellen des Notebooks ausführen und sich so in das Thema nichtlineare Optimierung einarbeiten. Viele Python-Zellen lassen sich mehrmals hintereinander ausführen, wobei jeweils ein neuer Interationsschritt gezeigt wird. Am besten probiert man das einfach aus.
 
-Viel Spaß beim Lernen.
+Viel Spaß beim Lernen!
