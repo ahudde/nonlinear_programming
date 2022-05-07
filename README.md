@@ -5,7 +5,11 @@
 Dieses Notebook führt in die grundlegenden Ideen der nichtlinearen Optimierung ein. Anhand von interaktiven Plots werden das Gradientenverfahren für die Optimierung, sowie das Penalty-Verfahren für die Berücksichtigung von Nebenbedingungen erklärt. 
 Weiterhin wird gezeigt, wie das sich nichtlineare Optimierung mit dem Python-Paket `Scipy` durchführen lässt, und es kommt noch ein Ausblick in die automatic differention mit dem Python-Paket `Autograd`.
 
-## Voraussetzung
+## Zugriff über Binder
+
+Sie können auf das Notebook über Binder mit dem Link [https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD) zugreifen.
+
+## Lokale Ausführung
 
 Man benötigt die Python-Anaconda Distribution (https://www.anaconda.com/products/individual). Zusätzlich sollte man noch die Pakete `plotly` und `autograd` installieren (`conda install plotly` und `conda install autograd` in den Anaconda-Prompt eingeben).
 
