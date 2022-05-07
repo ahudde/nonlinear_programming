@@ -1,0 +1,7 @@
+name: nonlinear_programming
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - plotly
+  - autograd
