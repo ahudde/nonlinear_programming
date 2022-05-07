@@ -3,7 +3,7 @@
 ![newplot](https://user-images.githubusercontent.com/60978072/150697749-3bf39092-d7b7-4ff3-8c2b-a50b096422bb.png)
 
 Dieses Notebook führt in die grundlegenden Ideen der nichtlinearen Optimierung ein. Anhand von interaktiven Plots werden das Gradientenverfahren für die Optimierung, sowie das Penalty-Verfahren für die Berücksichtigung von Nebenbedingungen erklärt. 
-Weiterhin wird gezeigt, wie das sich nichtlineare Optimierung mit dem Python-Paket `Scipy` durchführen lässt, und es kommt noch ein Ausblick in die automatic differention mit dem Python-Paket `Autograd`.
+Weiterhin wird gezeigt, wie sich nichtlineare Optimierung mit dem Python-Paket `Scipy` durchführen lässt, und es kommt noch ein Ausblick in die automatic differention mit dem Python-Paket `Autograd`.
 
 ## Zugriff über Binder
 
