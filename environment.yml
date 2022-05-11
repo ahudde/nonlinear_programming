@@ -7,4 +7,3 @@ dependencies:
   - plotly
   - autograd
   - time
-  - random
