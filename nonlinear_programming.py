@@ -1,11 +1,7 @@
-import copy
-## import von numpy fuer arrays und wesentliches mathematische Funktionen
+# import von numpy fuer arrays und wesentliches mathematische Funktionen
 import numpy as np
-## import von plotly fuer die Graphen
-import plotly
-import plotly.graph_objs._figure
+# import von plotly fuer die Graphen
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 
 class plot(go.Figure):
@@ -84,21 +80,21 @@ class plot(go.Figure):
         x = np.array(x)
         y = h_(x)
         self.add_trace(go.Scatter(x=x, y=y, showlegend=False, marker={'color': '#FF6692'}))
-        
+
     def plot_surface(self, xmin, xmax, ymin, ymax, function, opacity=1, showscale=True, colorscale=None):
-         x_axis = np.linspace(xmin, xmax, 100)
-         y_axis = np.linspace(ymin, ymax, 100)
-         [x, y] = np.meshgrid(x_axis, y_axis)
-         z = function([x, y])
-         if colorscale is None:
-             self.add_surface(x=x, y=y, z=z, opacity=opacity, showscale=showscale)
-         else:
-             self.add_surface(x=x, y=y, z=z, opacity=opacity, showscale=showscale, colorscale=colorscale)
-         self.update_layout(template='plotly_white', width=500, height=500)
-        
+        x_axis = np.linspace(xmin, xmax, 100)
+        y_axis = np.linspace(ymin, ymax, 100)
+        [x, y] = np.meshgrid(x_axis, y_axis)
+        z = function([x, y])
+        if colorscale is None:
+            self.add_surface(x=x, y=y, z=z, opacity=opacity, showscale=showscale)
+        else:
+            self.add_surface(x=x, y=y, z=z, opacity=opacity, showscale=showscale, colorscale=colorscale)
+        self.update_layout(template='plotly_white', width=500, height=500)
+
     def contour_zoom(self, xmin, xmax, ymin, ymax, function):
-        self.data[0]['x'] =  x_axis = np.linspace(xmin, xmax, 100)
-        self.data[0]['y'] =  y_axis = np.linspace(ymin, ymax, 100)
+        self.data[0]['x'] = x_axis = np.linspace(xmin, xmax, 100)
+        self.data[0]['y'] = y_axis = np.linspace(ymin, ymax, 100)
         [x, y] = np.meshgrid(x_axis, y_axis)
         self.data[0]['z'] = function([x, y])
         self.update_layout(xaxis_range=[xmin, xmax])

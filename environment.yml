@@ -3,5 +3,11 @@ channels:
   - conda-forge
 dependencies:
   - numpy
-  - plotly
-  - autograd
+  - scipy.optimize
+  - scipy.optimize.minimize
+  - scipy.optimize.NonlinearConstraint
+  - plotly.graph_objects
+  - autograd.numpy
+  - autograd.grad
+  - time.time
+  - random.uniform
