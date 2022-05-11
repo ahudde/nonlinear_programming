@@ -5,7 +5,7 @@
 Dieses Notebook führt in die grundlegenden Ideen der nichtlinearen Optimierung ein. Anhand von interaktiven Plots werden das Gradientenverfahren für die Optimierung, sowie das Penalty-Verfahren für die Berücksichtigung von Nebenbedingungen erklärt. 
 Weiterhin wird gezeigt, wie sich nichtlineare Optimierung mit dem Python-Paket `Scipy` durchführen lässt, und es kommt noch ein Ausblick in die automatic differention mit dem Python-Paket `Autograd`.
 
-## Zugriff über Binder
+## Zugriff über Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD)
 
 Sie können auf das Notebook über Binder mit dem Link [https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD) zugreifen.
 
