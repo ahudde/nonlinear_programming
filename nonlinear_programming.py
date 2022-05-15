@@ -20,7 +20,7 @@ class plot(go.Figure):
         self.update_layout(scene = dict(
                     xaxis_title='x1',
                     yaxis_title='x2',
-                    zaxis_title='y'))
+                    zaxis_title='f(x)'))
         self.for_each_trace(
             lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{z}<extra></extra>"))
 
