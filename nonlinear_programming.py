@@ -13,10 +13,16 @@ class plot(go.Figure):
     def plot_contour(self, xmin, xmax, ymin, ymax, function):
         x_axis = np.linspace(xmin, xmax, 100)
         y_axis = np.linspace(ymin, ymax, 100)
-        [x, y] = np.meshgrid(x_axis, y_axis)
-        z = function([x, y])
+        [x1, x2] = np.meshgrid(x_axis, y_axis)
+        z = function([x1, x2])
         self.add_trace(go.Contour(x=x_axis, y=y_axis, z=z, contours_coloring='lines'))
         self.update_layout(template='plotly_white', width=500, height=500)
+        self.update_layout(scene = dict(
+                    xaxis_title='x1',
+                    yaxis_title='x2',
+                    zaxis_title='y'))
+        self.for_each_trace(
+            lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{z}<extra></extra>"))
 
     def add_gradients(self, gradf):
         for X in range(-4, 1):
@@ -33,7 +39,6 @@ class plot(go.Figure):
                     text='',  # if you want only the arrow
                     showarrow=True,
                     arrowhead=2,
-                    # arrowsize=1,
                     arrowwidth=2,
                     arrowcolor='red')
 
@@ -68,6 +73,8 @@ class plot(go.Figure):
                                      ", f(x)=" + str(np.round(f_x, 3)) + ", h(x) = "
                                      + str(np.round(Nebenbedingung(self.result), 3))
                                      + ",<br> x=" + str(np.round(self.result, 3)))
+        self.for_each_trace(
+            lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<extra></extra>"))
 
     def add_h(self):
         def h_(x):
@@ -91,6 +98,12 @@ class plot(go.Figure):
         else:
             self.add_surface(x=x, y=y, z=z, opacity=opacity, showscale=showscale, colorscale=colorscale)
         self.update_layout(template='plotly_white', width=500, height=500)
+        self.update_layout(scene = dict(
+                    xaxis_title='x1',
+                    yaxis_title='x2',
+                    zaxis_title='y'))
+        self.for_each_trace(
+            lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{z}<extra></extra>"))
 
     def contour_zoom(self, xmin, xmax, ymin, ymax, function):
         self.data[0]['x'] = x_axis = np.linspace(xmin, xmax, 100)
