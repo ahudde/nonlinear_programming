@@ -2,7 +2,7 @@
 import numpy as np
 # import von plotly fuer die Graphen
 import plotly.graph_objects as go
-
+from plotly.subplots import make_subplots
 
 class plot(go.Figure):
     result = None
@@ -44,33 +44,27 @@ class plot(go.Figure):
 
     def add_gradient_descent(self, x0, function, grad, gamma=1, Iterationen=10, color=None, Nebenbedingung=None):
         x = np.zeros(shape=(Iterationen + 1, 2))
+        f_x = np.zeros(Iterationen + 1)
         x[0, :] = np.array(x0)
+        f_x[0] = np.round(function(x[0, :]), 3)
         for i in range(Iterationen):
             x[i + 1] = -gamma * grad(x[i, :]) + x[i, :]
-        f_x = np.round(function(x[-1]), 3)
-        if not color is None:
-            self.add_scatter(
-                x=x[:, 0],
-                y=x[:, 1],
-                mode='lines+markers',
-                showlegend=False,
-                line_color=color)
-        else:
-            self.add_scatter(
-                x=x[:, 0],
-                y=x[:, 1],
-                mode='lines+markers',
-                showlegend=False,
-                line_color=color)
+            f_x[i + 1] = np.round(function(x[i + 1, :]), 3)
+        self.add_scatter(
+            x=x[:, 0],
+            y=x[:, 1],
+            mode='lines+markers',
+            showlegend=False,
+            line_color=color)
         self.result = x[-1]
         if Nebenbedingung is None:
             self.update_layout(title="x0=" + str(np.round(x0, 3)) + ", gamma =" +
                                      str(np.round(gamma, 3)) + ",<br> Iterationen=" + str(Iterationen) +
-                                     ", f(x)=" + str(np.round(f_x, 3)) + ", x=" + str(np.round(self.result, 3)))
+                                     ", f(x)=" + str(np.round(f_x[-1], 3)) + ", x=" + str(np.round(self.result, 3)))
         else:
             self.update_layout(title="x0=" + str(np.round(x0, 3)) + ", gamma =" +
                                      str(np.round(gamma, 3)) + ",<br> Iterationen=" + str(Iterationen) +
-                                     ", f(x)=" + str(np.round(f_x, 3)) + ", h(x) = "
+                                     ", f(x)=" + str(np.round(f_x[-1], 3)) + ", h(x) = "
                                      + str(np.round(Nebenbedingung(self.result), 3))
                                      + ",<br> x=" + str(np.round(self.result, 3)))
         self.for_each_trace(
@@ -112,3 +106,23 @@ class plot(go.Figure):
         self.data[0]['z'] = function([x, y])
         self.update_layout(xaxis_range=[xmin, xmax])
         self.update_layout(yaxis_range=[ymin, ymax])
+
+    def add_gradient_descent_surface(self, x0, function, grad, gamma=1, Iterationen=10, color=None, Nebenbedingung=None):
+        x = np.zeros(shape=(Iterationen + 1, 2))
+        f_x = np.zeros(Iterationen + 1)
+        x[0, :] = np.array(x0)
+        f_x[0] = np.round(function(x[0, :]), 3)
+        for i in range(Iterationen):
+            x[i + 1] = -gamma * grad(x[i, :]) + x[i, :]
+            f_x[i + 1] = np.round(function(x[i + 1, :]), 3)
+        self.add_scatter3d(
+            x=x[:, 0],
+            y=x[:, 1],
+            z=f_x,
+            #mode='lines+markers',
+            showlegend=False,
+            line_color=color)
+        self.result = x[-1]
+        self.for_each_trace(
+            lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{f_x}<extra></extra>"))
+
