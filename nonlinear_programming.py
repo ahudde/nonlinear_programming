@@ -15,7 +15,7 @@ class plot(go.Figure):
         y_axis = np.linspace(ymin, ymax, 100)
         [x1, x2] = np.meshgrid(x_axis, y_axis)
         z = function([x1, x2])
-        self.add_trace(go.Contour(x=x_axis, y=y_axis, z=z, contours_coloring='lines'))
+        self.add_trace(go.Contour(x=x_axis, y=y_axis, z=z, contours_coloring='lines', showscale=False))
         self.update_layout(template='plotly_white', width=500, height=500)
         self.update_layout(scene = dict(
                     xaxis_title='x1',
@@ -126,3 +126,25 @@ class plot(go.Figure):
         self.for_each_trace(
             lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{f_x}<extra></extra>"))
 
+def show_plot(contour_plot, surface_plot):
+    fig = make_subplots(rows=1,
+                        cols=2,
+                        specs = [[{"type": "contour"}, {"type": "surface"}]],
+                        shared_yaxes = True)
+
+    fig.layout.update(contour_plot.layout)
+    fig.update_layout(template='plotly_white', width=1000, height=500)
+
+    for i in range(len(surface_plot.data)):
+        fig.add_trace(
+            surface_plot.data[i],
+            row=1, col=2
+        )
+
+    for i in range(len(contour_plot.data)):
+        fig.add_trace(
+            contour_plot.data[i],
+            row=1, col=1
+        )
+
+    fig.show()
