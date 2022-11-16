@@ -13,11 +13,9 @@ Sie können auf das Notebook über Binder mit dem Link [https://mybinder.org/v2/
 
 Man benötigt die Python-Anaconda Distribution (https://www.anaconda.com/products/individual). Zusätzlich sollte man noch die Pakete `plotly` und `autograd` installieren (`conda install plotly` und `conda install autograd` in den Anaconda-Prompt eingeben).
 
-![newplot (1)](https://user-images.githubusercontent.com/60978072/150698083-237ed06e-2020-4e94-80a3-e9b2fe2b95f3.png)
-
 ## Start
 
-Laden Sie die Daten `nonlinear_programming.ipynb` und `nonlinear_programming.py`, und legen Sie diese im gleichen Ordner ab. Nun starten Sie Jupyter Notebook, z.B. indem Sie `jupyter notebook` in den Anaconda Prompt eingeben, und navigieren Sie zu der Datei.
+Laden Sie die Dateien `Matrixexponentiation.ipynb`  sowie die '.svg'-Dateien, und legen Sie diese im gleichen Ordner ab. Nun starten Sie Jupyter Notebook, z.B. indem Sie `jupyter notebook` in den Anaconda Prompt eingeben, und navigieren Sie zu der Datei.
 
 Nun können sie die einzelnen Zellen des Notebooks ausführen und sich so in das Thema nichtlineare Optimierung einarbeiten. Viele Python-Zellen lassen sich mehrmals hintereinander ausführen, wobei jeweils ein neuer Interationsschritt gezeigt wird. Am besten probiert man das einfach aus.
 
