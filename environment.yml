@@ -2,6 +2,10 @@ name: nonlinear_programming
 channels:
   - conda-forge
 dependencies:
+  - python
   - numpy
-  - scipy
-  - plotly
+  - pip
+  - pip:
+    - scipy
+    - plotly
+    - autograd
