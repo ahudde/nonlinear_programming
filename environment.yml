@@ -1,6 +1,4 @@
 name: nonlinear_programming
-channels:
-  - defaults
 dependencies:
   - python
   - numpy
