@@ -6,6 +6,6 @@ dependencies:
   - numpy
   - pip
   - pip:
-    - scipy
+    - scipy.optimize
     - plotly
     - autograd
