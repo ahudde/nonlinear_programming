@@ -1,4 +1,4 @@
-name: base
+name: nonlinear_programming
 channels:
   - defaults
 dependencies:
