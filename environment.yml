@@ -2,8 +2,8 @@ name: nonlinear_programming
 channels:
   - defaults
 dependencies:
-  - conda
-  - python=3.9
+  - pip
+  - python
   - autograd
   - plotly
   - numpy
