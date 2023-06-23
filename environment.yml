@@ -3,5 +3,6 @@ channels:
   - defaults
   - anaconda
 dependencies:
-  - python
-  - numpy
+  - python=3.9.13
+  - numpy=1.24.3
+  - plotly=5.9.0
