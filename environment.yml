@@ -2,6 +2,7 @@ name: nonlinear_programming
 dependencies:
   - python
   - numpy
-  - scipy
-  - plotly
+  - scipy.optimize
+  - plotly.graph_objects
+  - plotly.subplots
   - autograd
