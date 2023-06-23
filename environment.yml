@@ -16,4 +16,3 @@ dependencies:
   - autograd
   - plotly
   - numpy
-prefix: C:\Users\hudde\anaconda3
