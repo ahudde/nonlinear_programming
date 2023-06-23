@@ -1,4 +1,7 @@
 name: nonlinear_programming
+channels:
+  - defaults
+  - anaconda
 dependencies:
   - python
   - numpy
