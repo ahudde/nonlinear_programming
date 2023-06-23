@@ -1,8 +1,19 @@
-name: nonlinear_programming
+name: base
 channels:
   - defaults
-  - anaconda
 dependencies:
-  - python
-  - numpy
+  - conda
+  - python=3.9
+  - menuinst
+  - console_shortcut
+  - powershell_shortcut
+  - conda-env
+  - conda-build
+  - conda-verify
+  - _ipyw_jlab_nb_ext_conf
+  - anaconda-navigator
+  - navigator-updater
+  - autograd
   - plotly
+  - numpy
+prefix: C:\Users\hudde\anaconda3
