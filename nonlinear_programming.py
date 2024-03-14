@@ -42,12 +42,12 @@ class plot(go.Figure):
                     arrowwidth=2,
                     arrowcolor='red')
 
-    def add_gradient_descent(self, x0, function, grad, gamma=1, Iterationen=10, color=None, Nebenbedingung=None):
-        x = np.zeros(shape=(Iterationen + 1, 2))
-        f_x = np.zeros(Iterationen + 1)
+    def add_gradient_descent(self, x0, function, grad, gamma=1, iterations=10, color=None, Nebenbedingung=None):
+        x = np.zeros(shape=(iterations + 1, 2))
+        f_x = np.zeros(iterations + 1)
         x[0, :] = np.array(x0)
         f_x[0] = np.round(function(x[0, :]), 3)
-        for i in range(Iterationen):
+        for i in range(iterations):
             x[i + 1] = -gamma * grad(x[i, :]) + x[i, :]
             f_x[i + 1] = np.round(function(x[i + 1, :]), 3)
         self.add_scatter(
@@ -59,11 +59,11 @@ class plot(go.Figure):
         self.result = x[-1]
         if Nebenbedingung is None:
             self.update_layout(title="x0=" + str(np.round(x0, 3)) + ", gamma =" +
-                                     str(np.round(gamma, 3)) + ",<br> Iterationen=" + str(Iterationen) +
+                                     str(np.round(gamma, 3)) + ",<br> iterations=" + str(iterations) +
                                      ", f(x)=" + str(np.round(f_x[-1], 3)) + ", x=" + str(np.round(self.result, 3)))
         else:
             self.update_layout(title="x0=" + str(np.round(x0, 3)) + ", gamma =" +
-                                     str(np.round(gamma, 3)) + ",<br> Iterationen=" + str(Iterationen) +
+                                     str(np.round(gamma, 3)) + ",<br> iterations=" + str(iterations) +
                                      ", f(x)=" + str(np.round(f_x[-1], 3)) + ", h(x) = "
                                      + str(np.round(Nebenbedingung(self.result), 3))
                                      + ",<br> x=" + str(np.round(self.result, 3)))
@@ -107,9 +107,9 @@ class plot(go.Figure):
         self.update_layout(xaxis_range=[xmin, xmax])
         self.update_layout(yaxis_range=[ymin, ymax])
 
-    def add_gradient_descent_surface(self, x0, function, grad, gamma=1, Iterationen=10, color=None, Nebenbedingung=None):
-        x = np.zeros(shape=(Iterationen + 1, 2))
-        f_x = np.zeros(Iterationen + 1)
+    def add_gradient_descent_surface(self, x0, function, grad, gamma=1, iterations=10, color=None, Nebenbedingung=None):
+        x = np.zeros(shape=(iterations + 1, 2))
+        f_x = np.zeros(iterations + 1)
         x[0, :] = np.array(x0)
         f_x[0] = np.round(function(x[0, :]), 3)
         for i in range(Iterationen):
