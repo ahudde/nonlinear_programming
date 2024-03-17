@@ -112,7 +112,7 @@ class plot(go.Figure):
         f_x = np.zeros(iterations + 1)
         x[0, :] = np.array(x0)
         f_x[0] = np.round(function(x[0, :]), 3)
-        for i in range(Iterationen):
+        for i in range(iterations):
             x[i + 1] = -gamma * grad(x[i, :]) + x[i, :]
             f_x[i + 1] = np.round(function(x[i + 1, :]), 3)
         self.add_scatter3d(
