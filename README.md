@@ -1,22 +1,28 @@
-# Nichtlineare Optimierung [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb)
+# Nonlinear Programming [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb)
 
 ![newplot](https://user-images.githubusercontent.com/60978072/150697749-3bf39092-d7b7-4ff3-8c2b-a50b096422bb.png)
 
-Dieses Notebook führt in die grundlegenden Ideen der nichtlinearen Optimierung ein. Anhand von interaktiven Plots werden das Gradientenverfahren für die Optimierung, sowie das Penalty-Verfahren für die Berücksichtigung von Nebenbedingungen erklärt. 
-Weiterhin wird gezeigt, wie sich nichtlineare Optimierung mit dem Python-Paket `Scipy` durchführen lässt, und es kommt noch ein Ausblick in die automatic differention mit dem Python-Paket `Autograd`.
+This Jupyter notebook introduces the basic concepts of nonlinear programming.
+With the help of interactive plots, the gradient descent algorithm for optimization, and the penalty method for the incorporation of constraints are explained.
+Furthermore, it is shown, how nonlinear programming can be run with the Python-Package `SciPy`.
+In the end, we give an outlook to automatic differentiation with the Python package `autograd`.
 
-## Zugriff über Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb)
+## How to run with Binder [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb)
 
-Sie können auf das Notebook über Binder mit dem Link [https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb) zugreifen.
+You can run the notebook on Binder with the following link: [https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb)
 
-## Lokale Ausführung
+## Running `nonlinear_programming` locally
 
-Man benötigt die Python-Anaconda Distribution (https://www.anaconda.com/products/individual). Zusätzlich sollte man noch die Pakete `plotly` und `autograd` installieren (`conda install plotly` und `conda install autograd` in den Anaconda-Prompt eingeben).
+One way is to install the Python-Anaconda-Distribution (https://www.anaconda.com/products/individual).
+On top of that, please install the packages `plotly` and `autograd` (by typing `conda install plotly` and `conda install autograd` in the anaconda prompt).
 
 ## Start
 
-Laden Sie die Dateien `nonlinear_programming.ipynb`  sowie die '.svg'-Dateien, und legen Sie diese im gleichen Ordner ab. Nun starten Sie Jupyter Notebook, z.B. indem Sie `jupyter notebook` in den Anaconda Prompt eingeben, und navigieren Sie zu der Datei.
+Download the files `nonlinear_programming.ipynb` and `nonlinear_programming.py` as well as the `.svg`-files in the same folder.
+Now, start the jupyter notebook by typing `jupyter notebook` into the anaconda prompt and navigating to the `nonlinear_programming` folder.
 
-Nun können sie die einzelnen Zellen des Notebooks ausführen und sich so in das Thema nichtlineare Optimierung einarbeiten. Viele Python-Zellen lassen sich mehrmals hintereinander ausführen, wobei jeweils ein neuer Interationsschritt gezeigt wird. Am besten probiert man das einfach aus.
+Now you can run the cells of the notebook and thus learn about nonlinear programming.
+You can run many cells several times, where each time one iteration is shown.
+Just try it out.
 
-Viel Spaß beim Lernen!
+Have fun learning!
