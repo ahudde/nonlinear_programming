@@ -1,6 +1,6 @@
-# import von numpy fuer arrays und wesentliches mathematische Funktionen
+# import of numpy for arrays and basic mathematical functions
 import numpy as np
-# import von plotly fuer die Graphen
+# import of plotly for the graphs
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
@@ -42,7 +42,7 @@ class plot(go.Figure):
                     arrowwidth=2,
                     arrowcolor='red')
 
-    def add_gradient_descent(self, x0, function, grad, gamma=1, iterations=10, color=None, Nebenbedingung=None):
+    def add_gradient_descent(self, x0, function, grad, gamma=1, iterations=10, color=None, constraint=None):
         x = np.zeros(shape=(iterations + 1, 2))
         f_x = np.zeros(iterations + 1)
         x[0, :] = np.array(x0)
@@ -57,7 +57,7 @@ class plot(go.Figure):
             showlegend=False,
             line_color=color)
         self.result = x[-1]
-        if Nebenbedingung is None:
+        if constraint is None:
             self.update_layout(title="x0=" + str(np.round(x0, 3)) + ", gamma =" +
                                      str(np.round(gamma, 3)) + ",<br> iterations=" + str(iterations) +
                                      ", f(x)=" + str(np.round(f_x[-1], 3)) + ", x=" + str(np.round(self.result, 3)))
@@ -65,7 +65,7 @@ class plot(go.Figure):
             self.update_layout(title="x0=" + str(np.round(x0, 3)) + ", gamma =" +
                                      str(np.round(gamma, 3)) + ",<br> iterations=" + str(iterations) +
                                      ", f(x)=" + str(np.round(f_x[-1], 3)) + ", h(x) = "
-                                     + str(np.round(Nebenbedingung(self.result), 3))
+                                     + str(np.round(constraint(self.result), 3))
                                      + ",<br> x=" + str(np.round(self.result, 3)))
         self.for_each_trace(
             lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<extra></extra>"))
@@ -107,7 +107,7 @@ class plot(go.Figure):
         self.update_layout(xaxis_range=[xmin, xmax])
         self.update_layout(yaxis_range=[ymin, ymax])
 
-    def add_gradient_descent_surface(self, x0, function, grad, gamma=1, iterations=10, color=None, Nebenbedingung=None):
+    def add_gradient_descent_surface(self, x0, function, grad, gamma=1, iterations=10, color=None, constraint=None):
         x = np.zeros(shape=(iterations + 1, 2))
         f_x = np.zeros(iterations + 1)
         x[0, :] = np.array(x0)
