@@ -26,3 +26,8 @@ You can run many cells several times, where each time one iteration is shown.
 Just try it out.
 
 Have fun learning!
+
+## Contributions, bug reports or support
+
+Bug reports and contributions are very welcome.
+Also, if you need assistance, please open an issue on [github.com/ahudde/nonlinear_programming/issues](https://github.com/ahudde/nonlinear_programming/issues).
