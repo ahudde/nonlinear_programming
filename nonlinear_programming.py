@@ -124,7 +124,7 @@ class plot(go.Figure):
             line_color=color)
         self.result = x[-1]
         self.for_each_trace(
-            lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{f_x}<extra></extra>"))
+            lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{z}<extra></extra>"))
 
 def show_plot(contour_plot, surface_plot):
     fig = make_subplots(rows=1,
