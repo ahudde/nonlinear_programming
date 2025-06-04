@@ -55,7 +55,9 @@ class plot(go.Figure):
             y=x[:, 1],
             mode='lines+markers',
             showlegend=False,
-            line_color=color)
+            line_color=color,
+            customdata = f_x.tolist(),
+            hovertemplate="x1 %{x}<br>x2 %{y} <br>f(x) %{customdata}<extra></extra>")
         self.result = x[-1]
         if constraint is None:
             self.update_layout(title="x0=" + str(np.round(x0, 3)) + ", gamma =" +
@@ -67,8 +69,6 @@ class plot(go.Figure):
                                      ", f(x)=" + str(np.round(f_x[-1], 3)) + ", h(x) = "
                                      + str(np.round(constraint(self.result), 3))
                                      + ",<br> x=" + str(np.round(self.result, 3)))
-        self.for_each_trace(
-            lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<extra></extra>"))
 
     def add_h(self):
         def h_(x):
