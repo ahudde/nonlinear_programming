@@ -1,6 +1,7 @@
-# Nonlinear Programming [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb)
+# Nonlinear Programming [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ahudde/nonlinear_programming/HEAD?labpath=nonlinear_programming.ipynb) [![status](https://jose.theoj.org/papers/572abc5e5f918f623f11347b5e863fa3/status.svg)](https://jose.theoj.org/papers/572abc5e5f918f623f11347b5e863fa3)
 
 ![newplot](https://user-images.githubusercontent.com/60978072/150697749-3bf39092-d7b7-4ff3-8c2b-a50b096422bb.png)
+
 
 This Jupyter notebook introduces the basic concepts of nonlinear programming.
 With the help of interactive plots, the gradient descent algorithm for optimization, and the penalty method for the incorporation of constraints are explained.
