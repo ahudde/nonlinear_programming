@@ -30,7 +30,7 @@ It can also be run locally without many dependencies.
 
 # Statement of Need
 
-The gradient descent algorithm, introduced by Augustin-Louis Cauchy in 1847 @Cauchy:1847, has become one of the most widely used algorithms, with applications ranging from economics (e.g., portfolio optimization @Suykens:2014; game theory @Daskalakis:2018), to engineering @Martins:2021, operations research @Taha:2017, and machine learning @Goodfellow:2016; @Hastie:2008.
+The gradient descent algorithm, introduced by Augustin-Louis Cauchy in 1847 @Cauchy:1847, has become one of the most widely used algorithms, with applications ranging from economics (e.g., portfolio optimization @Suykens:2014; game theory @Daskalakis:2018), to engineering @Martins:2021, operations research @Taha:2017, and machine learning [@Goodfellow:2016; @Hastie:2009].
 
 Even though gradient descent is very intuitive once a mental picture of the algorithm is formed, students often struggle to grasp the basic concepts.
 Considering that, it is even more difficult for students to picture how constraints change the nature of the problem and how the penalization method works.
