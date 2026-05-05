@@ -158,13 +158,4 @@ def show_plot(contour_plot, surface_plot):
             row=1, col=1
         )
 
-    fig.update_scenes(
-        xaxis_title='x1',
-        yaxis_title='x2',
-        zaxis_title='f(x)',
-        row=1,
-        col=2
-        )
-
-
     fig.show()
