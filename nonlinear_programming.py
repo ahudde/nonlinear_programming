@@ -17,10 +17,9 @@ class plot(go.Figure):
         z = function([x1, x2])
         self.add_trace(go.Contour(x=x_axis, y=y_axis, z=z, contours_coloring='lines', showscale=False))
         self.update_layout(template='plotly_white', width=500, height=500)
-        self.update_layout(scene = dict(
+        self.update_layout(
                     xaxis_title='x1',
-                    yaxis_title='x2',
-                    zaxis_title='f(x)'))
+                    yaxis_title='x2')
         self.for_each_trace(
             lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{z}<extra></extra>"))
 
@@ -28,10 +27,10 @@ class plot(go.Figure):
         for X in range(-4, 1):
             for Y in range(-2, 3):
                 self.add_annotation(
-                    ax=X,  # arrows' head
-                    ay=Y,  # arrows' head
-                    x=X + gradf([X, Y])[0],  # arrows' tail
-                    y=Y + gradf([X, Y])[1],  # arrows' tail
+                    ax=X,  # arrows' tail
+                    ay=Y,  # arrows' tail
+                    y=Y + gradf([X, Y])[1],  # arrows' head
+                    x=X + gradf([X, Y])[0],  # arrows' head
                     xref='x',
                     yref='y',
                     axref='x',
@@ -92,10 +91,6 @@ class plot(go.Figure):
         else:
             self.add_surface(x=x, y=y, z=z, opacity=opacity, showscale=showscale, colorscale=colorscale)
         self.update_layout(template='plotly_white', width=500, height=500)
-        self.update_layout(scene = dict(
-                    xaxis_title='x1',
-                    yaxis_title='x2',
-                    zaxis_title='y'))
         self.for_each_trace(
             lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{z}<extra></extra>"))
 
@@ -146,5 +141,14 @@ def show_plot(contour_plot, surface_plot):
             contour_plot.data[i],
             row=1, col=1
         )
+
+    fig.update_scenes(
+        xaxis_title='x1',
+        yaxis_title='x2',
+        zaxis_title='f(x)',
+        row=1,
+        col=2
+        )
+
 
     fig.show()
