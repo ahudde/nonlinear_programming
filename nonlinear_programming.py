@@ -4,7 +4,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-class plot(go.Figure):
+class Plot(go.Figure):
     result = None
 
     def __init__(self, *args):
@@ -91,6 +91,11 @@ class plot(go.Figure):
         else:
             self.add_surface(x=x, y=y, z=z, opacity=opacity, showscale=showscale, colorscale=colorscale)
         self.update_layout(template='plotly_white', width=500, height=500)
+        self.update_layout(scene=dict(
+            xaxis_title='x1',
+            yaxis_title='x2',
+            zaxis_title='f(x)'
+            ))
         self.for_each_trace(
             lambda t: t.update(hovertemplate="x1 %{x}<br>x2 %{y}<br>f(x) %{z}<extra></extra>"))
 
