@@ -71,7 +71,7 @@ class Plot(go.Figure):
 
     def add_h(self):
         def h_(x):
-            return x ** 3 + 9 * x ** 2 + 27 * x + 27
+            return (x + 3)**2
         xmin = self.data[0]['x'].min()
         xmax = self.data[0]['x'].max()
         ymin = self.data[0]['y'].min()
