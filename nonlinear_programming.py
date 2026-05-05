@@ -5,10 +5,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 class Plot(go.Figure):
-    
-    def __init__(self, *args):
-        super().__init__(*args)
-        self.result = None
+    result = None
 
     def __init__(self, *args):
         go.Figure.__init__(self, *args)
