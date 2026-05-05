@@ -134,9 +134,20 @@ def show_plot(contour_plot, surface_plot):
                         cols=2,
                         specs = [[{"type": "contour"}, {"type": "surface"}]],
                         shared_yaxes = True)
-
-    fig.layout.update(contour_plot.layout)
+    
     fig.update_layout(template='plotly_white', width=1000, height=500)
+    
+    fig.update_xaxes(title_text='x1', row=1, col=1)
+
+    fig.update_yaxes(title_text='x2', row=1, col=1)
+
+    fig.update_scenes(
+        xaxis_title='x1',
+        yaxis_title='x2',
+        zaxis_title='f(x)',
+        row=1,
+        col=2
+    )
 
     for i in range(len(surface_plot.data)):
         fig.add_trace(
