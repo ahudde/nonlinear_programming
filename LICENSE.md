@@ -1,4 +1,13 @@
-# MIT License
+# License
+
+This repository contains both software code and educational content.
+
+- Code is licensed under the MIT License.
+- Educational text, notebook prose, figures, and other non-code content are
+  licensed under the Creative Commons Attribution 4.0 International License
+  (CC BY 4.0), unless otherwise noted.
+
+## MIT License
 
 Copyright (c) 2022 Anselm Hudde, Maren Hackenberg
 
@@ -19,3 +28,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Creative Commons Attribution 4.0 International
+
+Educational text, notebook prose, figures, and other non-code content in this
+repository are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0), unless otherwise noted.
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by/4.0/
