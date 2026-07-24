@@ -41,7 +41,7 @@ But the function surface is best understood when one can rotate it in space to v
 
 That is exactly what this Jupyter notebook delivers:
 The student can actively rotate 3D plots of the function surface to easily grasp its structure.
-On top of that, the student can choose parameters herselve and progress through the steps interactively.
+On top of that, the student can choose parameters and progress through the steps interactively.
 
 For this reason, we have developed a Jupyter notebook designed for undergraduate and graduate students from diverse backgrounds to study gradient descent through hands-on exploration.
 
